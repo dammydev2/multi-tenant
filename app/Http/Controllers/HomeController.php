@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tenant;
 use Illuminate\Http\Request;
+use Stancl\Tenancy\Database\Models\Domain;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $domains = Domain::orderBy('id', 'desc')->paginate(100);
+        return view('home', ['domains' => $domains]);
     }
 }
