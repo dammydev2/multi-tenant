@@ -39,30 +39,6 @@ services:
         ports:
             - 8082:80
 
-    # npm:
-    #     image: node:latest
-    #     container_name: npm
-    #     #build:
-    #     #    context: ./example
-    #     ports:
-    #         - 3300:3000
-    #     volumes:
-    #         - ./src:/var/www
-    #     working_dir: /var/www
-    #     entrypoint: ["npm"]
-    #     networks:
-    #         - laravel-exa
-
-    # npm:
-    # image: node:14.6
-    # container_name: npm-memberportali
-    # volumes:
-    #   - .:/var/www
-    # working_dir: /var/www
-    # entrypoint: ['npm']
-    # networks:
-    #   - lahmi
-
 networks:
     laravel-exa:
         driver: bridge
