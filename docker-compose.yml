@@ -10,6 +10,10 @@ services:
             - .:/app
         ports:
             - 8000:8000
+        networks:
+            default:
+                aliases:
+                    - tenant.test
 
     db:
         platform: linux/x86_64

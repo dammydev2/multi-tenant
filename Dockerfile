@@ -7,8 +7,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www
-COPY . /var/www
-COPY .env.example /var/www/.env
+COPY . /var/www/
 RUN composer install
 
 #RUN php artisan db:seed
